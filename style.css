@@ -1,4 +1,4 @@
-/* ================= Reset & Font ================= */
+/* ================= Reset & Base ================= */
 * {
   margin: 0;
   padding: 0;
@@ -13,11 +13,15 @@ body {
   align-items: center;
   min-height: 100vh;
   width: 100%;
+  height: 100%;
   color: #fff;
-
-  /* Background image - change URL to your own image */
-  background: url(bg\ image.jpg) no-repeat center center fixed;
+  margin: 0;
+  padding: 0;
+  background-image: url("bgimage.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* ================= Container & Card ================= */
@@ -65,14 +69,14 @@ input {
   border-radius: 15px;
   border: none;
   outline: none;
-  background: #ff69b4; /* bright pink input */
+  background: #ff69b4;
   color: #fff;
   font-weight: 500;
   font-size: 15px;
 }
 
 input::placeholder {
-  color: #ffe6f0; /* lighter placeholder */
+  color: #ffe6f0;
 }
 
 /* ================= Buttons ================= */
@@ -109,7 +113,7 @@ input::placeholder {
 
 /* ================= Chatbox ================= */
 #chat-box {
-  background: rgba(255, 182, 193, 0.5); /* slightly transparent soft pink */
+  background: rgba(255, 182, 193, 0.5);
   border-radius: 15px;
   height: 400px;
   overflow-y: auto;
@@ -133,7 +137,7 @@ input::placeholder {
 
 .message-text {
   max-width: 70%;
-  background: #ff69b4; /* bright pink bubble */
+  background: #ff69b4;
   border-radius: 15px;
   padding: 10px 14px;
   word-wrap: break-word;
@@ -141,7 +145,6 @@ input::placeholder {
   font-weight: 500;
 }
 
-/* Edit/Delete Buttons */
 .message-container span {
   margin-left: 6px;
   cursor: pointer;
@@ -168,7 +171,7 @@ input::placeholder {
   border: none;
   outline: none;
   color: #fff;
-  background: #ff69b4; /* hot pink input */
+  background: #ff69b4;
   font-weight: 500;
   font-size: 15px;
 }
@@ -179,7 +182,7 @@ input::placeholder {
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  background: #ff1493; /* dark pink buttons */
+  background: #ff1493;
   color: #fff;
   font-weight: 600;
   transition: 0.2s;
@@ -215,6 +218,7 @@ input::placeholder {
     align-items: stretch;
     padding: 10px;
     min-height: auto;
+    background-attachment: scroll;
   }
 
   .card {
@@ -240,12 +244,8 @@ input::placeholder {
     padding: 10px;
     font-size: 14px;
   }
-
-  /* Fix background scrolling issue on mobile */
-  body {
-    background-attachment: scroll;
-  }
 }
+
 
 
 
