@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Room</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Chat Room</h1>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+
+      <!-- Chat Messages -->
+      <div id="chat-box"></div>
+
+      <!-- Emoji Panel -->
+      <div id="emojiPanel" style="display:none; gap:5px; margin-bottom:10px;"></div>
+
+      <!-- Input + Emoji + Send -->
+      <div class="chat-input-wrapper" style="display:flex; gap:5px; margin-top:10px;">
+        <button id="emojiBtn" class="emoji-btn">😊</button>
+        <input type="text" id="message" placeholder="Type a message" style="flex:1;" />
+        <button id="sendBtn" class="message-send-btn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase + JS -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

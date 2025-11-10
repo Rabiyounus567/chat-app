@@ -1,0 +1,221 @@
+/*/* ================= Reset & Font ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= Body & Background ================= */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+
+  /* Background image - change URL to your own image */
+  background: url(bg\ image.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* ================= Container & Card ================= */
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 182, 193, 0.85); /* soft pink transparent card */
+  border-radius: 20px;
+  padding: 35px 25px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+/* ================= Logo & Headings ================= */
+.logo {
+  font-size: 50px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ff1493, #ff69b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.small-note {
+  font-size: 12px;
+  opacity: 0.9;
+  margin: 5px 0;
+}
+
+/* ================= Inputs ================= */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  background: #ff69b4; /* bright pink input */
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+input::placeholder {
+  color: #ffe6f0; /* lighter placeholder */
+}
+
+/* ================= Buttons ================= */
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ff1493, #ff69b4);
+  color: #fff;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.ghost {
+  width: 100%;
+  margin-top: 8px;
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+/* ================= Chatbox ================= */
+#chat-box {
+  background: rgba(255, 182, 193, 0.5); /* slightly transparent soft pink */
+  border-radius: 15px;
+  height: 400px;
+  overflow-y: auto;
+  padding: 12px;
+  margin: 15px 0;
+}
+
+/* ================= Messages ================= */
+.message-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.message-container.sent {
+  justify-content: flex-end;
+}
+
+.message-container.received {
+  justify-content: flex-start;
+}
+
+.message-text {
+  max-width: 70%;
+  background: #ff69b4; /* bright pink bubble */
+  border-radius: 15px;
+  padding: 10px 14px;
+  word-wrap: break-word;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Edit/Delete Buttons */
+.message-container span {
+  margin-left: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.message-container span:hover {
+  transform: scale(1.2);
+}
+
+/* ================= Chat Input ================= */
+.chat-input-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.chat-input-wrapper input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #ff69b4; /* hot pink input */
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.message-send-btn,
+.emoji-btn {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: #ff1493; /* dark pink buttons */
+  color: #fff;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.message-send-btn:hover,
+.emoji-btn:hover {
+  opacity: 0.9;
+}
+
+/* ================= Logout ================= */
+.logout-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 20, 147, 0.5);
+  color: white;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 20, 147, 0.8);
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+  #chat-box {
+    height: 300px;
+  }
+  .message-text {
+    max-width: 85%;
+  }
+}
