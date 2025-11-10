@@ -1,4 +1,4 @@
-/*/* ================= Reset & Font ================= */
+/* ================= Reset & Font ================= */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  width: 100%;
   color: #fff;
 
   /* Background image - change URL to your own image */
@@ -209,13 +210,41 @@ input::placeholder {
 
 /* ================= Responsive ================= */
 @media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    min-height: auto;
+  }
+
   .card {
     padding: 20px;
+    width: 100%;
   }
+
   #chat-box {
     height: 300px;
   }
+
   .message-text {
-    max-width: 85%;
+    max-width: 90%;
+    font-size: 14px;
+  }
+
+  .chat-input-wrapper input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn, .message-send-btn, .emoji-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Fix background scrolling issue on mobile */
+  body {
+    background-attachment: scroll;
   }
 }
+
+
